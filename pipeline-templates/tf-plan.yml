@@ -12,15 +12,15 @@ jobs:
         steps:
           - checkout: self
           - script: |
-            set -e
-            terraform init -input=false \
-              -backend-config="access=$(ARM_ACCESS_KEY)"
-            terraform plan -input=false -var-file="env/${{ parameters.environment_name }}/env.tfvars"
-          name: 'TerraformPlan'
-          displayName: 'Terraform Plan'
-          env:
-            ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-            ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-            ARM_TENANT_ID: $(ARM_TENANT_ID)
-            ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-            ARM_ACCESS_KEY: $(ARM_ACCESS_KEY)
+              set -e
+              terraform init -input=false \
+                -backend-config="access=$(ARM_ACCESS_KEY)"
+              terraform plan -input=false -var-file="env/${{ parameters.environment_name }}/env.tfvars"
+            name: 'TerraformPlan'
+            displayName: 'Terraform Plan'
+            env:
+              ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+              ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+              ARM_TENANT_ID: $(ARM_TENANT_ID)
+              ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+              ARM_ACCESS_KEY: $(ARM_ACCESS_KEY)
