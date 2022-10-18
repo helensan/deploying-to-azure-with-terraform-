@@ -1,0 +1,6 @@
+ENV = "dev"
+APP_NAME = "helloworld"
+RG_LOCATION = "westus"
+RG_LOCATION_SHORT = "wus"
+APP_SERVICE_PLAN_TIER = "Free"
+APP_SERVICE_PLAN_SIZE = "F1"

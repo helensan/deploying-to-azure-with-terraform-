@@ -1,0 +1,15 @@
+trigger: none
+
+resources:
+-repo: self
+
+pool: 
+  vmImage: 'ubuntu-latest'
+
+variables:
+-group: vg-helloworld-prd
+
+extends:
+  template: ../../pipeline-templates/tf-destroy.yml
+  parameters:
+    environment_name: 'prd'
