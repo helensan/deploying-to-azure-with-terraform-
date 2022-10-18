@@ -12,7 +12,7 @@ jobs:
       deploy:
         steps:
           - checkout: self
-          - scripts: |
+          - script: |
             set -e
             terraform init -input=false \
               -backend-config="access=$(ARM_ACCESS_KEY)"
