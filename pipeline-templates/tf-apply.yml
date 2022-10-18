@@ -11,8 +11,8 @@ jobs:
     runOnce:
       deploy:
         steps:
-          -checkout: self
-          -scripts: |
+          - checkout: self
+          - scripts: |
             set -e
             terraform init -input=false \
               -backend-config="access=$(ARM_ACCESS_KEY)"
