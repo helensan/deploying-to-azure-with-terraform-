@@ -1,13 +1,13 @@
 trigger: none
 
 resources:
--repo: self
+- repo: self
 
 pool: 
   vmImage: 'ubuntu-latest'
 
 variables:
--group: vg-helloworld-dev
+- group: vg-helloworld-dev
 
 extends:
   template: ../../pipeline-templates/tf-destroy.yml

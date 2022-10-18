@@ -1,13 +1,13 @@
 trigger: none
 
 resources:
--repo: self
+- repo: self
 
 pool: 
   vmImage: 'ubuntu-latest'
 
 variables:
--group: vg-helloworld-prd
+- group: vg-helloworld-prd
 
 extends:
   template: ../../pipeline-templates/tf-apply.yml
