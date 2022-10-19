@@ -6,13 +6,13 @@ variable "env" {
 variable "rg_location" {
     description = "The resource group location"
     type = string
-    default = "westus"
+    default = "westus2"
 }
 
 variable "rg_short_location" {
     description = "The resource group short location"
     type = string
-    default = "wus"
+    default = "wus2"
 }
 
 variable "app_name" {
