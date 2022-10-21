@@ -9,7 +9,7 @@ variable "rg_location" {
     default = "westus2"
 }
 
-variable "rg_short_location" {
+variable "rg_location_short" {
     description = "The resource group short location"
     type = string
     default = "wus2"
