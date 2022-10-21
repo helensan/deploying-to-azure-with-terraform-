@@ -43,7 +43,7 @@ resource "azurerm_linux_web_app" "app" {
     name = "app-${var.RG_LOCATION_SHORT}-${var.ENV}-${var.APP_NAME}"
     location = module.rg.location
     resource_group_name = module.rg.name
-    app_service_plan_id = azurerm_service_plan.asp.id
+    service_plan_id = azurerm_service_plan.asp.id
     identity {
         type = "SystemAssigned"
     }
