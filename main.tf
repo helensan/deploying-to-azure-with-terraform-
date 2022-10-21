@@ -21,11 +21,11 @@ module "rg" {
     env = var.ENV
     app_name = var.APP_NAME
     rg_location = var.RG_LOCATION
-    rg_short_location = var.RG_SHORT_LOCATION
+    rg_short_location = var.RG_LOCATION_SHORT
 }
 
 resource "azurerm_service_plan" "asp" {
-    name = "asp-${var.RG_SHORT_LOCATION}-${var.ENV}-${var.APP_NAME}"
+    name = "asp-${var.RG_LOCATION_SHORT}-${var.ENV}-${var.APP_NAME}"
     location = module.rg.location
     resource_group_name = module.rg.name
     os_type = "Linux"
@@ -33,14 +33,14 @@ resource "azurerm_service_plan" "asp" {
 }
 
 resource "azurerm_application_insights" "ai" {
-    name = "ai-${var.RG_SHORT_LOCATION}-${var.ENV}-${var.APP_NAME}"
+    name = "ai-${var.RG_LOCATION_SHORT}-${var.ENV}-${var.APP_NAME}"
     location = module.rg.location
     resource_group_name = module.rg.name
     application_type = "web"
 }
 
 resource "azurerm_linux_web_app" "app" {
-    name = "app-${var.RG_SHORT_LOCATION}-${var.ENV}-${var.APP_NAME}"
+    name = "app-${var.RG_LOCATION_SHORT}-${var.ENV}-${var.APP_NAME}"
     location = module.rg.location
     resource_group_name = module.rg.name
     app_service_plan_id = azurerm_service_plan.asp.id
