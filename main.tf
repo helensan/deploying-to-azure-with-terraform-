@@ -21,6 +21,7 @@ module "rg" {
     env = var.ENV
     app_name = var.APP_NAME
     rg_location = var.RG_LOCATION
+    rg_location_short = var.RG_LOCATION_SHORT
 }
 
 resource "azurerm_service_plan" "asp" {
