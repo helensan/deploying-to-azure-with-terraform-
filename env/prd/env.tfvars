@@ -1,5 +1,5 @@
 ENV = "prd"
 APP_NAME = "helloworld"
-RG_LOCATION = "westus2"
-RG_LOCATION_SHORT = "wus2"
+RG_LOCATION = "centralus"
+RG_LOCATION_SHORT = "cus"
 SKU_NAME = "F1"
