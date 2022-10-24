@@ -18,13 +18,8 @@ variable "RG_LOCATION_SHORT" {
     type = string
 }
 
-variable APP_SERVICE_PLAN_TIER {
-    description = "App service plan tier"
-    type = string
-}
-
-variable APP_SERVICE_PLAN_SIZE {
-    description = "App service plan size"
+variable SKU_NAME {
+    description = "App service plan sku"
     type = string
 }
 
