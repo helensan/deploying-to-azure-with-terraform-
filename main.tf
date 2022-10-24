@@ -21,7 +21,7 @@ resource "azurerm_service_plan" "asp" {
     location = azurerm_resource_group.rg.location
     resource_group_name = azurerm_resource_group.rg.name
     os_type = "Linux"
-    sku_name = "F1"
+    sku_name = var.SKU_NAME
 }
 
 resource "azurerm_application_insights" "ai" {
