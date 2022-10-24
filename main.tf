@@ -39,7 +39,9 @@ resource "azurerm_linux_web_app" "app" {
     identity {
         type = "SystemAssigned"
     }
-    site_config {}
+    site_config {
+        always_on = false
+    }
     app_settings = {
         APPINSIGHTS_INSTRUMENTATIONKEY = azurerm_application_insights.ai.instrumentation_key
         APPLICATIONINSIGHTSAGENT_EXTENSION_ENABLED = true
