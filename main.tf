@@ -13,7 +13,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
     name = "rg-${var.RG_LOCATION_SHORT}-${var.ENV}-${var.APP_NAME}"
-    location = var.rg_location
+    location = var.RG_LOCATION
 }
 
 resource "azurerm_service_plan" "asp" {
