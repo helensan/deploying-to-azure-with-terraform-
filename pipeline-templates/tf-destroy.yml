@@ -19,10 +19,10 @@ jobs:
                 -backend-config="key=$(BACKEND_KEY_NAME)" \
                 -backend-config="access_key=$(BACKEND_ACCESS_KEY)" 
               terraform destroy -input=false -auto-approve -var-file="env/${{ parameters.environment_name }}/env.tfvars"
-          name: 'TerraformDestroy'
-          displayName: 'Terraform Destroy'
-          env:
-            ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-            ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-            ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-            ARM_TENANT_ID: $(ARM_TENANT_ID)
+            name: 'TerraformDestroy'
+            displayName: 'Terraform Destroy'
+            env:
+              ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+              ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+              ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+              ARM_TENANT_ID: $(ARM_TENANT_ID)
